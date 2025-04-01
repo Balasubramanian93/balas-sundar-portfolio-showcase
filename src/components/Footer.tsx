@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 const Footer = () => {
   return (
@@ -18,28 +19,66 @@ const Footer = () => {
             <p className="text-gray-400 mt-1">Software Engineer II at Unum Ireland</p>
           </div>
           <div className="flex gap-6 animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform-gpu">
-              <Github />
-            </a>
-            <a href="#" className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform-gpu">
-              <Linkedin />
-            </a>
-            <a href="mailto:contact@balasundararajan.com" className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform-gpu">
-              <Mail />
-            </a>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="#" className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform-gpu">
+                    <Github />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>GitHub Profile</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="#" className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform-gpu">
+                    <Linkedin />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>LinkedIn Profile</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a href="mailto:contact@balasundararajan.com" className="text-gray-300 hover:text-white transition-colors hover:scale-110 transform-gpu">
+                    <Mail />
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Send Email</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
           </div>
         </div>
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 mb-4 md:mb-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
             © {new Date().getFullYear()} Balasubramanian Sundararajan. All rights reserved.
           </p>
-          <a 
-            href="#hero" 
-            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors animate-fade-in hover:scale-105 transform-gpu"
-            style={{ animationDelay: "0.4s" }}
-          >
-            Back to top <ArrowUp className="h-4 w-4" />
-          </a>
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <a 
+                  href="#hero" 
+                  className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors animate-fade-in hover:scale-105 transform-gpu"
+                  style={{ animationDelay: "0.4s" }}
+                >
+                  Back to top <ArrowUp className="h-4 w-4" />
+                </a>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Scroll to top</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
         </div>
       </div>
     </footer>
