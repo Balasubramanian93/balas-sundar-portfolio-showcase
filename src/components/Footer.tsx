@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { GitHub, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-6">
             <a href="#" className="text-gray-300 hover:text-white transition-colors">
-              <GitHub />
+              <Github />
             </a>
             <a href="#" className="text-gray-300 hover:text-white transition-colors">
               <Linkedin />

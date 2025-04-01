@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, GitHub, Linkedin, Mail } from 'lucide-react';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -35,7 +35,7 @@ const Hero = () => {
             </div>
             <div className="flex gap-4">
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">
-                <GitHub size={24} />
+                <Github size={24} />
               </a>
               <a href="#" className="text-gray-600 hover:text-primary transition-colors">
                 <Linkedin size={24} />
